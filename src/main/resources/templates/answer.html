@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div th:switch="${answer}">
+    <div th:case="''">
+        <h1>Sorry</h1>
+        <p th:text="'Sorry, we didn\'t understand ' + ${query} + '.'"> <em></em></p>
+    </div>
+    <div th:case="*">
+        <h1 th:text="${query}"></h1>
+        <p th:text="${answer}"></p>
+    </div>
+</div>
+<p><a href="/">Back to Search Page</a></p>
+</body>
+</html>
